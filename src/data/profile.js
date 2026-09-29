@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Khadija",
+  name: "Khadija Shoib",
   title: "Performance Marketer",
   tagline: "Google Ads • Meta Ads • Performance Marketing",
   email: "khadija.stack@gmail.com",

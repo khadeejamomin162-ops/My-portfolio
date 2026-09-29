@@ -59,6 +59,13 @@ export default function CaseStudyDetail() {
         </div>
       )}
 
+      {study.keyTakeaway && (
+        <div className="mt-14 border-t border-line pt-8">
+          <p className="text-xs text-blue mb-2">Key Takeaway</p>
+          <p className="text-stone leading-relaxed max-w-2xl italic">{study.keyTakeaway}</p>
+        </div>
+      )}
+
       <div className="mt-14">
         <h2 className="font-display italic text-xl mb-3">Tools</h2>
         <div className="flex flex-wrap gap-2">

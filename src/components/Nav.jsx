@@ -16,7 +16,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 bg-charcoal/80 backdrop-blur-md border-b border-line">
       <div className="max-w-content mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="font-display text-xl italic tracking-tight">
-          Khadija
+          Khadija Shoib
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import { profile } from "../data/profile";
 import { caseStudies } from "../data/caseStudies";
 import { process } from "../data/process";
+import { skills } from "../data/skills";
 import { faqs } from "../data/faqs";
+import { teardown } from "../data/teardown";
 import { googleShots, metaShots } from "../data/screenshots";
 import CaseStudyCard from "../components/CaseStudyCard";
 import ScreenshotGrid from "../components/ScreenshotGrid";
 import ContactForm from "../components/ContactForm";
 import Accordion from "../components/Accordion";
+import TeardownAccordion from "../components/TeardownAccordion";
 
 const trustItems = [
   {
@@ -97,17 +100,47 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-panel border border-line rounded-lg p-3">
-                <div className="h-2 w-10 rounded bg-line mb-2" />
-                <div className="h-2 w-16 rounded bg-blue/50" />
+                <p className="text-[10px] text-stone mb-1">Platform</p>
+                <p className="text-sm font-medium mb-1">Google Ads</p>
+                <p className="text-[11px] text-stone">Search intent + ad relevance</p>
               </div>
               <div className="bg-panel border border-line rounded-lg p-3">
-                <div className="h-2 w-10 rounded bg-line mb-2" />
-                <div className="h-2 w-16 rounded bg-blue/50" />
+                <p className="text-[10px] text-stone mb-1">Platform</p>
+                <p className="text-sm font-medium mb-1">Meta Ads</p>
+                <p className="text-[11px] text-stone">Audience + creative testing</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* FREE TRIAL BANNER */}
+      <div className="max-w-content mx-auto px-6 -mt-2 mb-2 md:mb-4">
+        <a
+          href={profile.instagram.url}
+          target="_blank"
+          rel="noreferrer"
+          className="group block rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-orange-500 to-amber-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+        >
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+            <div>
+              <p className="font-display italic text-xl sm:text-2xl text-charcoal mb-2 leading-snug">
+                🎁 FREE 3-Day Meta Ad Trial for Small Brands
+              </p>
+              <p className="text-sm text-charcoal/80 leading-relaxed max-w-md">
+                No charges. No commitment. If you get sales, we talk monthly. If not,
+                no hard feelings.
+              </p>
+              <p className="text-xs text-charcoal/60 mt-2">
+                Limited to first 3 brands this month.
+              </p>
+            </div>
+            <span className="shrink-0 bg-charcoal text-ivory px-6 py-3 rounded-full text-sm font-medium text-center whitespace-nowrap group-hover:bg-panel transition-colors">
+              DM me on Instagram @adswithkhadija
+            </span>
+          </div>
+        </a>
+      </div>
 
       {/* TRUST STRIP */}
       <section className="border-y border-line">
@@ -171,7 +204,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {caseStudies.map((s) => (
+          {caseStudies.slice(0, 3).map((s) => (
             <CaseStudyCard key={s.slug} study={s} />
           ))}
         </div>
@@ -180,6 +213,23 @@ export default function Home() {
       {/* SERVICES: GOOGLE ADS + META ADS SHOWCASE */}
       <section id="services" className="border-t border-line scroll-mt-20">
         <div className="max-w-content mx-auto px-6 py-24">
+          <h2 className="font-display italic text-3xl mb-4">What I Do.</h2>
+          <p className="text-stone max-w-lg mb-10 leading-relaxed">
+            From keyword research to creative testing -- the pieces that go into
+            every campaign, before deciding what to optimize.
+          </p>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {skills.map((s) => (
+              <div key={s.step} className="border border-line rounded-xl p-6">
+                <p className="text-blue font-display italic text-2xl mb-3">{s.step}</p>
+                <p className="font-medium mb-2">{s.title}</p>
+                <p className="text-sm text-stone leading-relaxed">{s.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="max-w-content mx-auto px-6 py-24 border-t border-line">
           <h2 className="font-display italic text-3xl mb-4">Search Ads Built Around Intent.</h2>
           <p className="text-stone max-w-lg mb-10 leading-relaxed">
             From keyword research to compelling ad copy and conversion-focused
@@ -197,6 +247,46 @@ export default function Home() {
             fit how people actually scroll through Instagram and Facebook.
           </p>
           <ScreenshotGrid shots={metaShots} />
+        </div>
+      </section>
+
+      {/* INDEPENDENT PAID MEDIA TEARDOWN */}
+      <section
+        id="teardown"
+        className="max-w-content mx-auto px-6 py-24 border-t border-line scroll-mt-20"
+      >
+        <span className="inline-block text-[11px] tracking-wide uppercase text-blue border border-blue/40 rounded-full px-3 py-1 mb-5">
+          Independent Research
+        </span>
+        <h2 className="font-display italic text-3xl mb-3">Independent Paid Media Teardown</h2>
+        <p className="text-stone max-w-xl mb-2 leading-relaxed">
+          An independent analysis of a real brand's advertising -- not client work, but a
+          demonstration of how I think.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-stone mt-6 mb-2">
+          <span className="text-ivory font-medium">Brand:</span>
+          <a
+            href={teardown.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue hover:underline"
+          >
+            {teardown.brand}
+          </a>
+          <span className="text-line">|</span>
+          <span>{teardown.type}</span>
+        </div>
+
+        <p className="text-stone text-xs italic max-w-2xl mb-10 leading-relaxed">
+          {teardown.disclaimer}
+        </p>
+
+        <TeardownAccordion sections={teardown.sections} />
+
+        <div className="mt-8 border-t border-line pt-8">
+          <p className="text-xs text-blue mb-2">Key Takeaway</p>
+          <p className="text-stone leading-relaxed max-w-2xl italic">{teardown.keyTakeaway}</p>
         </div>
       </section>
 

@@ -43,6 +43,8 @@ export const caseStudies = [
       },
     ],
     tools: ["Google Ads", "Google Keyword Planner", "Meta Ads Manager", "Meta Pixel", "React", "Vercel"],
+    keyTakeaway:
+      "Local intent doesn't need a big budget to capture -- it needs the right keywords, sitelinks, and a message that matches how people already talk about the cafe.",
     note: "Practice project -- self-initiated to demonstrate the full workflow from site build to campaign setup. Not a live client account; figures shown above are real research/build data, not performance results.",
   },
   {
@@ -76,6 +78,8 @@ export const caseStudies = [
       },
     ],
     tools: ["Meta Ads Manager", "Meta Pixel", "Conversions API", "Canva"],
+    keyTakeaway:
+      "Cold traffic converts less than warm traffic that's already shown interest -- most of the lift comes from acting on that, not spending more against strangers.",
     note: "Illustrative example -- a hypothetical brand used to demonstrate funnel and retargeting strategy for e-commerce. No real business, screenshots, or performance data attached.",
   },
   {
@@ -108,6 +112,74 @@ export const caseStudies = [
       },
     ],
     tools: ["Google Ads (Performance Max)", "Google Ads Editor", "Google Maps location assets"],
+    keyTakeaway:
+      "Broadening reach only helps if the campaign can also filter for who's actually ready to book a class, not just who's local.",
     note: "Illustrative example -- a hypothetical business used to demonstrate Performance Max strategy for local lead generation. No real business, screenshots, or performance data attached.",
+  },
+  {
+    slug: "aurelie",
+    name: "Aurelie",
+    platformBadge: "Google Ads + Meta Ads",
+    category: "Fashion E-commerce",
+    objective: "Reduce CAC, refresh creative rotation",
+    type: "illustrative",
+    summary:
+      "An illustrative fashion e-commerce brand watching acquisition costs climb as a handful of top-performing creatives lose steam -- used to demonstrate a structured creative-testing and funnel-separation strategy.",
+    problem:
+      "Rising CAC, ad fatigue, and over-reliance on a small set of winning creatives that eventually stop performing as well.",
+    approach: [
+      {
+        label: "Funnel Separation",
+        detail:
+          "Split prospecting, retargeting, and customer reactivation into distinct campaigns instead of one blended structure, so each stage could be diagnosed and adjusted independently.",
+      },
+      {
+        label: "Creative Testing Framework",
+        detail:
+          "Structured testing across four angles -- product, social proof, problem/solution, and lifestyle -- so no single creative carried the whole campaign's performance.",
+      },
+      {
+        label: "Refresh Cadence",
+        detail:
+          "A planned rotation schedule for swapping creatives before fatigue set in, rather than reacting only after CAC had already climbed.",
+      },
+    ],
+    tools: ["Meta Ads Manager", "Google Ads", "Meta Pixel", "Canva"],
+    keyTakeaway:
+      "When performance declines, increasing budget isn't always the fix -- creative fatigue and funnel structure are often the real bottleneck.",
+    note: "Illustrative example -- a hypothetical brand used to demonstrate creative-testing and funnel strategy for e-commerce. No real business, screenshots, or performance data attached.",
+  },
+  {
+    slug: "brightline-dental",
+    name: "Brightline Dental",
+    platformBadge: "Google Ads + Meta Ads",
+    category: "Local Business -- Dental Clinic",
+    objective: "Improve lead quality, not just lead volume",
+    type: "illustrative",
+    summary:
+      "An illustrative dental clinic getting plenty of enquiries, but too many low-intent or price-focused leads that never turn into booked appointments.",
+    problem:
+      "Lead volume was high, but lead quality was inconsistent -- broad dental keywords were pulling in people who were mainly comparison-shopping on price.",
+    approach: [
+      {
+        label: "Search Intent Restructuring",
+        detail:
+          "Moved spend away from broad dental keywords toward high-intent, service-specific searches (a named procedure) rather than generic \"dentist near me\" terms.",
+      },
+      {
+        label: "Campaign Separation",
+        detail:
+          "Split campaigns by service line so budget and messaging could be tuned per procedure instead of one catch-all campaign.",
+      },
+      {
+        label: "Landing Page Match",
+        detail:
+          "Matched each ad group to a landing page describing that exact service, so the message stayed consistent from search to page.",
+      },
+    ],
+    tools: ["Google Ads", "Google Keyword Planner", "Google Ads Editor"],
+    keyTakeaway:
+      "A cheaper lead isn't automatically a better lead -- optimization should focus on what happens after the enquiry, not just its cost.",
+    note: "Illustrative example -- a hypothetical business used to demonstrate search-intent and lead-quality strategy for a local service business. No real business, screenshots, or performance data attached.",
   },
 ];
