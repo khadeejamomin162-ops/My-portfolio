@@ -2,7 +2,7 @@ export const profile = {
   name: "Khadija Shoib",
   title: "Performance Marketer",
   tagline: "Google Ads • Meta Ads • Performance Marketing",
-  email: "khadija.stack@gmail.com",
+  email: "khadeeja.stack@gmail.com",
   instagram: {
     handle: "@adswithkhadija",
     url: "https://instagram.com/adswithkhadija",
